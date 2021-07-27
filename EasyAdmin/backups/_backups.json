@@ -1,0 +1,17 @@
+{
+    "lastBackup": 1627134017,
+    "backups": [
+        {
+            "backupDate": "15_50_29_06_2021",
+            "backupFile": "banlist_15_50_29_06_2021.json",
+            "id": 1,
+            "backupTimestamp": 1624981800
+        },
+        {
+            "backupDate": "13_40_24_07_2021",
+            "backupFile": "banlist_13_40_24_07_2021.json",
+            "id": 2,
+            "backupTimestamp": 1627134017
+        }
+    ]
+}
