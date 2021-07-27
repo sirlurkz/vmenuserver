@@ -1,0 +1,72 @@
+exec resources/vMenu/config/permissions.cfg
+
+sv_tebexSecret c4e958fb06536b25a680011766b7a78624ccf22f
+
+add_ace resource.EasyAdmin command.add_principal allow
+add_ace group.staffperms EasyAdmin allow
+
+sets discord "https://discord.gg/s8au7DKRqr"
+
+setr ea_LanguageName "en"                # set our language to english
+setr ea_MenuButton "170"            # set our menu button to F2. default: "289"
+setr ea_alwaysShowButtons "false"    # we don't want to see buttons we can't even access, do we? default: "false"
+set ea_moderationNotification "false"   # this can be either "false" or a discord webhook address, this will send a discord message if an admin takes actions against a player  ( such as banning and kicking )
+set ea_custombanlist "false"            # read docs for this, dont touch it
+set ea_enableCallAdminCommand "true"
+set ea_enableReportCommand "true"
+add_ace resource.DiscordAcePerms command.add_principal allow
+add_ace resource.DiscordAcePerms command.remove_principal allow
+ensure DiscordAcePerms
+set onesync_enabled 1
+set onesync_workaround763185 true
+set onesync_forceMigration true
+
+# These resources will start by default.
+ensure mapmanager
+ensure chat
+ensure spawnmanager
+ensure sessionmanager
+ensure basic-gamemode
+ensure hardcap
+ensure rconlog
+ensure Badger_Discord_API
+ensure discord_perms
+ensure DiscordAcePerms
+ensure DiscordTagIDs
+ensure EasyAdmin
+ensure IDsAboveHead
+ensure vMenu
+ensure discordroles
+ensure BadgerEssentials
+ensure ocrp_postal_map
+ensure BetterAI
+ensure concessfreepatoche
+ensure dpclothing-master
+ensure handsup
+ensure LegacyFuel
+ensure mosleynutt
+ensure mumble-voip
+ensure savewheelpos
+ensure SeatbeltIndicator
+ensure RichPresence
+
+# config for hud
+add_ace group.managment BadgerEssentials.Commands allow
+
+add_ace group.admin BadgerEssentials.Command.Announce allow
+
+add_ace group.leohc BadgerEssentials.Command.PriorityCooldown allow
+add_ace group.leohc BadgerEssentials.Command.PC allow
+add_ace group.leohcBadgerEssentials.Command.PCActive allow 
+add_ace group.leohc BadgerEssentials.Command.PCOnHold allow
+add_ace group.leohc BadgerEssentials.Command.PCReset allow
+
+add_ace group.staff BadgerEssentials.Command.Peacetime allow
+add_ace group.staff BadgerEssentials.Command.SetAOP allow
+
+add_ace group.admin BadgerEssentials.Bypass.ReviveTimer allow
+
+
+
+
+sovori8ze5hiowh5d8crs7cogr07jr2z
